@@ -12,3 +12,9 @@ The Modbus I/O Scanner processes communication requests for up to 32 Scanner Dev
 * Starting with a blank device which has no predefined communication requests, and manually adding the required Modbus Read requests, Modbus Write requests, and the associated mapping for PLC data storage locations for the Modbus Server. Once a blank Scanner Device has been created, the configuration of that device can be used to build a user profile (*.mup), which can the be used to create additional Scanner Devices that target Modbus Servers of the same type.
 
 AutomationDirect.com would prefer to have Modbus Profile for known Modbus devices; however, this is impractical for third-party devices that we cannot access or test. To facilitate the expansion of the device library, we will be allowing user to submit their device profile to be incorporated into Do-more Designer.
+
+Here is the process for submitting your Device Profiles, or changes to existing Profiles:
+1.	Clone the repository.
+2.	Make changes (add new profiles or modify existing profiles).
+3.	‘Commit’ changes and create a ‘Pull Request’ (this will trigger an email to AutomationDirect.com to look over the request).
+4.	AutomationDirect will review the ‘Pull Request’ and ‘Merge’ it into the repository if it is approved.
