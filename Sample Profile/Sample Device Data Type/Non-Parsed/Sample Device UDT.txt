@@ -1,0 +1,4 @@
+SampleDeviceUDT
+// Field Name, Data Type, Memory Layout, Read/Write, Display Format, Data View Detail
+Outputs, Outputs, 3:0, Read-Write, Native, Short
+Inputs, Inputs, 0:0, Read-Write, Native, Short

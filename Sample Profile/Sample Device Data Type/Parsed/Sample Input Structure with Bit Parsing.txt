@@ -1,5 +1,6 @@
-InputsBitParsing
+InputsBitPars
 // Field Name, Data Type, Memory Layout, Read/Write, Display Format, Data View Detail
+//The bits are mapped to the same memory location as the Status word, The PLC Firmware handle the memory read and write.
 Enabled, BIT, 0:0, Read-Write, Native, Short
 Running, BIT, 0:1, Read-Write, Native, Short
 Accelerating, BIT, 0:2, Read-Write, Native, Short

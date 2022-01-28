@@ -1,0 +1,5 @@
+Outputs
+// Field Name, Data Type, Memory Layout, Read/Write, Display Format, Data View Detail
+CommandWord, UWORD, 0:0, Read-Write, Native, Short
+CommandSpeed, REAL, 4:0, Read-Write, Native, Short
+
