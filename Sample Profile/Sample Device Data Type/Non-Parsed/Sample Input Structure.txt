@@ -1,0 +1,5 @@
+Inputs
+// Field Name, Data Type, Memory Layout, Read/Write, Display Format, Data View Detail
+StatusWord, UWORD, 0:0, Read-Write, Native, Short
+FaultCode, UWORD, 1:0, Read-Write, Native, Short
+ActualSpeed, REAL, 2:0, Read-Write, Native, Short
