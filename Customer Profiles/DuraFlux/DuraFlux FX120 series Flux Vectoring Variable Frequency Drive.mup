@@ -1,0 +1,61 @@
+[Profile]
+	Name = "DuraFlux FX120 series Flux Vectoring Variable Frequency Drive";
+	Description = "DuraFlux FX120 series Flux Vectoring Variable Frequency Drive";
+	Version = 1.2;
+	ReadInterval = 1000;
+	WriteInterval = 500;
+
+[Comm1]
+	Comm = 3,8448,7;		$ Read Holding Regs 48449-48455
+	Field1 = "High byte: Warning code / Low Byte: Error code",0,0,0,0,1,0,"Inputs.FaultRecord";		$ High byte: Warning code / Low Byte: Error code: Copy 48449 to DF120.Inputs.FaultRecord
+	Field2 = "Operating Status",1,0,0,0,1,0,"Inputs.Status";		$ Operating Status: Copy 48450 to DF120.Inputs.Status
+	Field3 = "Frequency Command ",2,0,0,0,1,0,"Inputs.FrequencyCommand";		$ Frequency Command : Copy 48451 to DF120.Inputs.FrequencyCommand
+	Field4 = "Output Frequency",3,0,0,0,1,0,"Inputs.OutputFrequency";		$ Output Frequency: Copy 48452 to DF120.Inputs.OutputFrequency
+	Field5 = "Drive’s Output Current",4,0,0,0,1,0,"Inputs.OutputCurrent";		$ Drive’s Output Current: Copy 48453 to DF120.Inputs.OutputCurrent
+	Field6 = "DC Bus Voltage",5,0,0,0,1,0,"Inputs.BusVoltage";		$ DC Bus Voltage: Copy 48454 to DF120.Inputs.BusVoltage
+	Field7 = "Output Voltage",6,0,0,0,1,0,"Inputs.OutputVoltage";		$ Output Voltage: Copy 48455 to DF120.Inputs.OutputVoltage
+
+[Comm2]
+	Comm = 16,8192,3;		$ Write Registers 48193-48195
+	Field1 = "Drive Control Commands: Start/Stop/Jog",0,0,0,0,1,0,"Outputs.Command";		$ Drive Control Commands: Start/Stop/Jog: Copy DF120.Outputs.Command to 48193
+	Field2 = "Frequency command",1,0,0,0,1,0,"Outputs.CommandFrequency";		$ Frequency command: Copy DF120.Outputs.CommandFrequency to 48194
+	Field3 = "External Fault, Reset, etc",2,0,0,0,1,0,"Outputs.CommandFault";		$ External Fault, Reset, etc: Copy DF120.Outputs.CommandFault to 48195
+
+[SubType1]
+	Schema = "GS20In",19;
+	Field0 = "GS20In",32772,4,46,0,0,0,0;
+	Field1 = "Status",2,1,0,4,1,0,61;
+	Field2 = "FaultRecord",2,2,0,5,0,0,61;
+	Field3 = "FrequencyCommand",2,2,0,5,0,1,61;
+	Field4 = "OutputFrequency",2,2,0,5,1,1,61;
+	Field5 = "OutputCurrent",2,1,0,4,0,2,61;
+	Field6 = "BusVoltage",2,2,0,5,1,2,49;
+	Field7 = "OutputVoltage",2,2,0,5,0,3,61;
+	Field8 = "Enabled",0,0,0,1,0,0,61;
+	Field9 = "Running",0,0,0,1,1,0,61;
+	Field10 = "Accelerating",0,0,0,1,2,0,61;
+	Field11 = "Decelerating",0,0,0,1,3,0,61;
+	Field12 = "Forward",0,0,0,1,4,0,61;
+	Field13 = "Reverse",0,0,0,1,5,0,61;
+	Field14 = "Local_Remote",0,0,0,1,6,0,61;
+	Field15 = "Faulted",0,0,0,1,0,0,61;
+
+[SubType2]
+	Schema = "GS20Out",19;
+	Field0 = "GS20Out",32770,4,46,0,0,0,0;
+	Field1 = "Command",2,1,0,4,0,0,61;
+	Field2 = "CommandFrequency",2,2,0,5,1,0,61;
+	Field3 = "CommandFault",2,1,0,4,0,1,61;
+	Field4 = "Enable",0,0,0,1,0,0,61;
+	Field5 = "Run",0,0,0,1,1,0,61;
+	Field6 = "Reset",0,0,0,1,2,0,61;
+	Field7 = "FrequencySrc",0,0,0,1,3,0,61;
+
+[DataType]
+	Schema = "GS20Drive",11;
+	Field0 = "GS20Drive",32774,4,46,0,0,0,0;
+	Struct1 = "Inputs","GS20In",1,32772,0,0,173;
+	Struct2 = "Outputs","GS20Out",2,32770,0,4,173;
+
+[Registers]
+
