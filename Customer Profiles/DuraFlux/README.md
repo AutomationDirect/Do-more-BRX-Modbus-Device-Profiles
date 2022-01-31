@@ -1,6 +1,6 @@
 # DuraFlux FX120 series Flux Vectoring Variable Frequency Drive
 Product Description<br/>
-Please Product Name, Manufacture, Part Number, and Links to Product Documentation
+Please provide Product Manufacture, Name, Description, Part Number, and Links to Product Documentation
 
 Product Modbus Mapping<br/>
 Please provide product parameter definition with modbus address.<br/>
