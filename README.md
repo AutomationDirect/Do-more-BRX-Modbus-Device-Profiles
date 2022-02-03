@@ -1,5 +1,6 @@
 # Do-more BRX Modbus Device Profiles
-Repository for modbus Device Profiles
+Repository for Modbus Device Profiles
+
 Do-more Designer 2.9.0 introduced the Modbus Scanner. BRX CPUs can use a Modbus I/O Scanner to process Modbus Read and Modbus Write requests similarly to the way it handles local I/O and Ethernet Remote I/O. It does this by creating a Scanner Device for any combination of up to 32 Modbus/TCP or Modbus/RTU servers. The Scanner Device can additionally perform any required format conversion on the data, removing the need to add ladder logic to process the data before it is sent or after it is received.
 The Modbus I/O Scanner processes communication requests for up to 32 Scanner Devices, each of which uses a Modbus/RTU or Modbus/TCP Client device to communicate with a target Modbus Server. Scanner Devices can be created using the following two methods: 
 
