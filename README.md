@@ -6,7 +6,8 @@ The Modbus I/O Scanner processes communication requests for up to 32 Scanner Dev
 
 
 1. Using a profile that was created for a specific Modbus Server. 
-   A profile defines the Modbus Reads and Writes that will be processed, where the data for these Reads and Write are sourced from or stored to as appropriate, and any byte-swapping / word-swapping or scaling that may be needed as part of the Read or Write operation. A profile can be built so that it uses either a user-defined data structure or built-in memory blocks for storing the Scanner Device's data.  
+
+A profile defines the Modbus Reads and Writes that will be processed, where the data for these Reads and Write are sourced from or stored to as appropriate, and any byte-swapping / word-swapping or scaling that may be needed as part of the Read or Write operation. A profile can be built so that it uses either a user-defined data structure or built-in memory blocks for storing the Scanner Device's data.  
   * There are system profiles (*.mdp) that are provided with the Do-more Designer software for many of the Modbus Server devices that are sold by Automationdirect.com. Scanner Devices built with a system profile will have a fixed configuration that cannot be altered to include additional comm requests, or delete existing comm requests, or change the PLC memory storage configuration. 
   * There are also user profiles (*.mup) that are built by the Scanner Device configuration utility from the Modbus Read, Modbus Write, and mapping information supplied by the user when the Scanner Device is created.
 
